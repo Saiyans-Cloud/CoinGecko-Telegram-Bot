@@ -18,10 +18,10 @@ if (process.env.NODE_ENV === "prd") {
 	bot.telegram.setWebhook(`${CURRENT_URL}/bot`);
 }
 
-app.get("/", async function (req, res) {
+app.get("!", async function (req, res) {
 	res.sendFile(path.join(__dirname, "../website", "index.html"));
 });
-app.get("/commands", (req, res) => {
+app.get("!commands", (req, res) => {
 	res.sendFile(path.join(__dirname, "../website", "commands.html"));
 });
 
